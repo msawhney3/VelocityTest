@@ -1,0 +1,18 @@
+<style>#villains th, #villains td { padding: 5px; }</style>
+    <h2>Villains of Batman</h2>
+    <table border="1" id="villains">
+        <tr bgcolor="#5DADE2">
+            <th>Alias</th>
+            <th>Name</th>
+        </tr>
+        #foreach($villain in $_XPathTool.selectNodes($contentRoot,'/villains/villain'))
+            <tr>
+                <td>
+                    $_XPathTool.selectSingleNode($villain,'alias').value
+                </td>
+                <td>
+                    $_XPathTool.selectSingleNode($villain,'name').value
+                </td>
+            </tr>
+        #end
+    </table>
