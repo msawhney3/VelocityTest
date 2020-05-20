@@ -1,0 +1,26 @@
+<villains>
+    <villain>
+        <alias>Mr. Freeze</alias>
+        <name>Dr. Victor Fries</name>
+        <gender>Male</gender>
+        <appeared>1959</appeared>
+    </villain>
+    <villain>
+        <alias>Poison Ivy</alias>
+        <name>Pamela Lillian Isley</name>
+        <gender>Female</gender>
+        <appeared>1966</appeared>
+    </villain>
+    <villain>
+        <alias>The Penguin</alias>
+        <name>Oswald Chesterfield Cobblepot</name>
+        <gender>Male</gender>
+        <appeared>1941</appeared>
+    </villain>
+    <villain>
+        <alias>The Joker</alias>
+        <name>Jack Napier</name>
+        <gender>Male</gender>
+        <appeared>1940</appeared>
+    </villain>
+    <villain>
