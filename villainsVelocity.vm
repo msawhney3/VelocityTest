@@ -1,9 +1,10 @@
 <style>#villains th, #villains td { padding: 5px; }</style>
     <h2>Villains of Batman</h2>
     <table border="1" id="villains">
-        <tr bgcolor="#5DADE2">
+        <tr bgcolor="#A3E4D7 ">
             <th>Alias</th>
             <th>Name</th>
+            <th>Appeared</th>
         </tr>
         #foreach($villain in $_XPathTool.selectNodes($contentRoot,'/villains/villain'))
             <tr>
@@ -13,6 +14,23 @@
                 <td>
                     $_XPathTool.selectSingleNode($villain,'name').value
                 </td>
+                <td>
+                    $_XPathTool.selectSingleNode($villain, 'appeared').value
+                </td>
             </tr>
-        #end
-    </table>
+            #end
+      </table>
+      
+  #foreach($villain in $_XPathTool.selectNodes($contentRoot,'/villains/villain'))
+         #set($yr = $villain.getChild('appeared').value)
+         #set($gen = $villain.getChild('gender').value)
+         #set($name = $villain.getChild('alias').value)
+           #set($hello = $gen.toUpperCase())
+         <ul>
+  
+        <li>The $hello villain known as $name appeared in <strong>$yr</strong>.</li>
+          </ul>
+          
+       
+
+#end
